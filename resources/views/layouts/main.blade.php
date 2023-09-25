@@ -7,7 +7,7 @@
   <title>@yield('title') - InterLara</title>
 </head>
 
-<body>
+<body class="font-roboto">
   @include('includes/header')
 
   <main>

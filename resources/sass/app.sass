@@ -1,7 +1,6 @@
-@tailwind base
-@tailwind components
-@tailwind utilities
+@use './tailwindcss/base' as twb
+@use './tailwindcss/components' as twc
+@use './tailwindcss/utilities' as twu
 
-@layer components
-    .container
-        @apply px-8 py-4
+@use './base'
+@use './layout'
