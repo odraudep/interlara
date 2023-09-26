@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'pages.base.home')->name('base.home');
+
+Route::get('/blog', [PostController::class, 'index'])->name('posts.index');

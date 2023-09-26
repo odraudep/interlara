@@ -16,6 +16,7 @@ module.exports = {
             },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
+                roboto_serif: ['Roboto Serif', 'serif'],
             },
         },
     },
