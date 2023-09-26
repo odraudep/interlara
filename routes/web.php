@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'pages.base.home');
+Route::view('/', 'pages.base.home')->name('base.home');

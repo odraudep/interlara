@@ -1,9 +1,15 @@
 .header
     &__menu
-        @apply flex gap-4 mx-auto
+        @apply flex gap-8 mx-auto
 
         a
-            @apply relative pb-1 transition-colors duration-200 font-medium text-gray-900 hover:text-primary focus:text-primary
+            @apply relative pb-1 outline-none transition-colors duration-200 font-medium text-gray-900 hover:text-primary focus:text-primary
+
+            &[aria-current="page"]
+                @apply text-primary
+
+                &::before
+                    @apply scale-x-100
 
             &:hover,
             &:focus
@@ -12,4 +18,4 @@
 
             &::before
                 content: ''
-                @apply block w-full h-[2px] absolute bottom-0 bg-primary origin-left scale-x-0 transition-transform duration-200
+                @apply block w-3/5 h-[2px] absolute bottom-0 bg-primary origin-left scale-x-0 transition-transform duration-200

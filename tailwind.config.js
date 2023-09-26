@@ -12,7 +12,7 @@ module.exports = {
                 center: true,
             },
             colors: {
-                primary: '#c31e39',
+                primary: 'var(--clr-primary)',
             },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
