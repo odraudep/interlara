@@ -18,7 +18,7 @@
         [
             'label' => 'Contact',
             'path' => '/contact',
-            'name' => 'base.contact',
+            'name' => 'contact.index',
         ],
     ];
 @endphp

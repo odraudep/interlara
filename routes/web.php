@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PostController;
 
 /*
@@ -16,6 +17,8 @@ use App\Http\Controllers\PostController;
 */
 
 Route::view('/', 'pages.base.home')->name('base.home');
-Route::view('/contact', 'pages.base.contact')->name('base.contact');
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
