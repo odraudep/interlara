@@ -13,6 +13,8 @@ module.exports = {
             },
             colors: {
                 primary: 'var(--clr-primary)',
+                primary_dark1: 'var(--clr-primary-dark1)',
+                primary_dark2: 'var(--clr-primary-dark2)',
             },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],

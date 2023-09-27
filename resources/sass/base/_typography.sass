@@ -2,4 +2,27 @@
     @apply bg-red-600 text-white
 
 h1
-    @apply mb-14 text-6xl font-light tracking-wider
+    @apply my-6 mb-14 text-6xl font-light tracking-wider
+
+h2
+    @apply mb-6 text-4xl font-light tracking-wider
+
+h3
+    @apply mb-12 text-2xl font-normal tracking-wider
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    &.divider
+        @apply w-max relative mx-auto pb-4
+
+        &::before
+            content: ''
+            @apply block w-2/6 h-[2px] rounded absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-primary
+
+h1
+    &.divider::before
+        @apply h-1

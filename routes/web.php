@@ -16,5 +16,6 @@ use App\Http\Controllers\PostController;
 */
 
 Route::view('/', 'pages.base.home')->name('base.home');
+Route::view('/contact', 'pages.base.contact')->name('base.contact');
 
 Route::get('/blog', [PostController::class, 'index'])->name('posts.index');
