@@ -32,6 +32,11 @@ class ContactController extends Controller
             'message' => $request->message
         ]));
 
-        return to_route('base.home');
+        return to_route('base.home')->with('server_data', [
+            'msg' => [
+                'type' => 'success',
+                'content' => 'Contact sent.'
+            ]
+        ]);
     }
 }

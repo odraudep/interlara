@@ -2,19 +2,25 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-  @include('includes/head')
+    @include('includes/head')
 
-  <title>@yield('title') - InterLara</title>
+    <title>@yield('title') - InterLara</title>
 </head>
 
 <body class="font-roboto">
-  @include('includes/header')
+    @include('includes/header')
 
-  <main>
-    @yield('content')
-  </main>
+    @if (isset(session('server_data')['msg']))
+        <x-alert-box :variant="session('server_data')['msg']['type']">
+            {{ session('server_data')['msg']['content'] }}
+        </x-alert-box>
+    @endif
 
-  @include('includes/footer')
+    <main>
+        @yield('content')
+    </main>
+
+    @include('includes/footer')
 </body>
 
 </html>
