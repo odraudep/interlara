@@ -20,11 +20,13 @@
                     type="text"
                     placeholder="Name"
                     name="name"
+                    :value="auth()->user()->name ?? ''"
                 />
                 <x-form.field-text
                     type="email"
                     placeholder="E-mail"
                     name="email"
+                    :value="auth()->user()->email ?? ''"
                 />
                 <x-form.field-text
                     field_type="multiline"
