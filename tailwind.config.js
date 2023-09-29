@@ -1,11 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './vendor/laravel/jetstream/**/*.blade.php',
+        './storage/framework/views/*.php',
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.ts',
     ],
+
     theme: {
         extend: {
             container: {
@@ -21,10 +26,18 @@ module.exports = {
                 error_text: '#58151c',
             },
             fontFamily: {
-                roboto: ['Roboto', 'sans-serif'],
-                roboto_serif: ['Roboto Serif', 'serif'],
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
+                roboto_serif: [
+                    'Roboto Serif',
+                    ...defaultTheme.fontFamily.serif,
+                ],
             },
         },
     },
-    plugins: [],
+
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 }

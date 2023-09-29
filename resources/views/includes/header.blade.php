@@ -66,7 +66,7 @@
                 </li>
                 <li>
                     <a
-                        href='/signup'
+                        href='/register'
                         class="text-black outline-none hover:opacity-80 focus:underline focus:opacity-80"
                     >Sign Up</a>
                 </li>
