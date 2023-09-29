@@ -26,11 +26,11 @@
                     </div>
 
                     <div class="flex flex-1 flex-col p-4 text-center">
-                        <span class="mb-3 text-sm">September 25 2023</span>
+                        <span class="mb-3 text-sm">{{ $post['created_at']->format('F d Y') }}</span>
                         <h4 class="mb-4 font-roboto_serif text-2xl font-medium tracking-wide">{{ $post['title'] }}</h4>
-                        <p class="mb-4">{{ $post['description'] }}</p>
+                        <p class="mb-4">{{ $post['excerpt'] }}</p>
                         <a
-                            href="/blog/1"
+                            href="/blog/{{ $post['id'] }}"
                             class="mt-auto inline-block text-lg uppercase tracking-wider outline-none transition-colors hover:text-primary focus:text-primary"
                             arial-label="Post page"
                         >

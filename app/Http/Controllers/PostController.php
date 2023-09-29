@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Post;
+
 class PostController extends Controller
 {
     /**
@@ -13,17 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = [
-            ['title' => 'Title here', 'description' => 'Description here lorem ipsum he lkjodiajd asoddosj'],
-            ['title' => 'Title here', 'description' => 'Description here lorem ipsum he lkjodiajd asoddosj'],
-            ['title' => 'Title here', 'description' => 'Description here'],
-            ['title' => 'Title here', 'description' => 'Description here lorem ipsum he lkjodiajd asoddosj'],
-            ['title' => 'Title here', 'description' => 'Description here lorem ipsum he lkjodiajd asoddosj'],
-            ['title' => 'Title here', 'description' => 'Description here lorem ipsum he lkjodiajd asoddosj'],
-            ['title' => 'Title here', 'description' => 'Description here'],
-            ['title' => 'Title here', 'description' => 'Description here lorem ipsum he lkjodiajd asoddosj'],
-            ['title' => 'Title here', 'description' => 'Description here'],
-        ];
+        $posts = Post::where('is_draft', 0)->get();
         return view('pages.posts.index', ['posts' => $posts]);
     }
 
