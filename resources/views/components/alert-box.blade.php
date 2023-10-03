@@ -22,7 +22,7 @@
     role="alert"
     {{ $attributes->merge([
         'role' => 'alert',
-        'class' => "border-[1px] $color_class",
+        'class' => "border $color_class",
     ]) }}
 >
     <div class="container">

@@ -57,20 +57,32 @@
                 </button>
             </li>
 
-            <ul class="flex gap-4">
-                <li>
-                    <a
-                        href='/login'
-                        class="text-black outline-none hover:opacity-80 focus:underline focus:opacity-80"
-                    >Log In</a>
-                </li>
-                <li>
-                    <a
-                        href='/register'
-                        class="text-black outline-none hover:opacity-80 focus:underline focus:opacity-80"
-                    >Sign Up</a>
-                </li>
-            </ul>
+            <li>
+                @guest
+                    <ul class="flex gap-4">
+                        <li>
+                            <a
+                                href='/login'
+                                class="text-black outline-none hover:opacity-80 focus:underline focus:opacity-80"
+                            >Log In</a>
+                        </li>
+                        <li>
+                            <a
+                                href='/register'
+                                class="text-black outline-none hover:opacity-80 focus:underline focus:opacity-80"
+                            >Sign Up</a>
+                        </li>
+                    </ul>
+                @endguest
+
+                @auth
+                    <ul class="flex gap-4">
+                        <li>
+                            @include('includes/header-user-menu')
+                        </li>
+                    </ul>
+                @endauth
+            </li>
         </ul>
     </nav>
 </header>

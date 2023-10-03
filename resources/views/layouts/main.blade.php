@@ -5,6 +5,8 @@
     @include('includes/head')
 
     <title>@yield('title') - InterLara</title>
+
+    @vite('resources/js/app.js')
 </head>
 
 <body class="font-roboto">
